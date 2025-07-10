@@ -4,7 +4,8 @@ public class Constructor1Lesson {
     public static void main(String[] args) {
         Chicken c1 = new Chicken();
         Chicken c2 = new Chicken();
-        System.out.println();
+        System.out.println(c1);
+        System.out.println(c2);
     }
     
 }
