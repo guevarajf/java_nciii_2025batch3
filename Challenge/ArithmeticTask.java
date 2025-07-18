@@ -1,3 +1,5 @@
+package Challenge;
+
 class ArithmeticTask {
     public static void main (String[] args){
           
