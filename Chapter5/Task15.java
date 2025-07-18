@@ -1,4 +1,4 @@
-package chapter6;
+
 
 // Task15.java class
 public class Task15 {

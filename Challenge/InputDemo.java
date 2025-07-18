@@ -8,8 +8,7 @@ public class InputDemo {
         System.out.print("What is your name : ");
         String response = scanner.nextLine();
         System.out.println("Welcome " + response);
-
-
+        scanner.close();
 
     }
     
