@@ -1,0 +1,75 @@
+classDiagram
+    class School {
+        -string name
+        -string address
+        -string phoneNumber
+        +getName() string
+        +setName(string name)
+        +getAddress() string
+        +setAddress(string address)
+    }
+
+    class Department {
+        -string departmentId
+        -string name
+        -string description
+        +getDepartmentId() string
+        +getName() string
+        +setName(string name)
+        +getDescription() string
+        +setDescription(string description)
+    }
+
+    class Office {
+        -string officeId
+        -string roomNumber
+        -string location
+        -int capacity
+        -boolean isFacultyRoom
+        +getOfficeId() string
+        +getRoomNumber() string
+        +setRoomNumber(string roomNumber)
+        +getLocation() string
+        +setLocation(string location)
+        +isFacultyRoom() boolean
+    }
+
+    class Teacher {
+        -string teacherId
+        -string firstName
+        -string lastName
+        -string email
+        -string phoneNumber
+        -string subject
+        +getTeacherId() string
+        +getName() string
+        +setName(string firstName, string lastName)
+        +getEmail() string
+        +setEmail(string email)
+        +getSubject() string
+        +setSubject(string subject)
+    }
+
+    class MasterTeacher {
+        -string specialization
+        -int yearsOfExperience
+        -string[] certifications
+        +getSpecialization() string
+        +setSpecialization(string specialization)
+        +getYearsOfExperience() int
+        +manageDepartment()
+        +superviseTeachers()
+    }
+
+    %% Relationships with multiplicities
+    School "1" -- "1..*" Department : "consists of"
+    Department "1" -- "1..*" Office : "located in"
+    Department "1" -- "1" MasterTeacher : "managed by"
+    MasterTeacher "1" -- "1..*" Teacher : "supervises"
+    Office "1" -- "0..1" Teacher : "assigned to"
+    
+    %% Special relationship for faculty room
+    Office "1" -- "0..1" MasterTeacher : "acts as faculty room"
+
+    %% Inheritance
+    MasterTeacher --|> Teacher : "inherits from"

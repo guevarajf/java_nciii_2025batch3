@@ -1,0 +1,54 @@
+flowchart TB
+    %% Actors
+    Customer["👤 Customer<br/>(actor)"]
+    Engineers["👨‍💻 Gcash Software<br/>Engineers"]
+    
+    %% System boundary
+    subgraph System ["Gcash Online Banking System"]
+        %% Main use cases
+        CheckBalance["Check Balances"]
+        DepositFunds["Deposit Funds"]
+        WithdrawCash["Withdraw Cash"]
+        TransferFunds["Transfer Funds"]
+        CustomerAuth["Customer Authentication"]
+        AppTransaction["App Transaction"]
+        AppHelp["App Help"]
+        Maintenance["Maintenance"]
+        SoftwareUpdates["Software Updates"]
+        Diagnostics["Diagnostics"]
+        BugFixes["Bug Fixes"]
+    end
+    
+    %% Relationships - Customer uses
+    Customer --> CheckBalance
+    Customer --> DepositFunds
+    Customer --> WithdrawCash
+    Customer --> TransferFunds
+    Customer --> AppTransaction
+    Customer --> AppHelp
+    
+    %% Relationships - Gcash Software Engineers
+    Engineers --> Maintenance
+    Engineers --> SoftwareUpdates
+    Engineers --> Diagnostics
+    Engineers --> BugFixes
+    
+    %% Include relationships
+    CheckBalance -.-> CustomerAuth
+    DepositFunds -.-> CustomerAuth
+    WithdrawCash -.-> CustomerAuth
+    TransferFunds -.-> CustomerAuth
+    AppTransaction -.-> CustomerAuth
+    
+    %% Extend relationships
+    AppHelp -.-> AppTransaction
+    Maintenance -.-> SoftwareUpdates
+    Maintenance -.-> Diagnostics
+    Maintenance -.-> BugFixes
+    
+    %% Styling
+    classDef actor fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef usecase fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    
+    class Customer,Engineers actor
+    class CheckBalance,DepositFunds,WithdrawCash,TransferFunds,CustomerAuth,AppTransaction,AppHelp,Maintenance,SoftwareUpdates,Diagnostics,BugFixes usecase
