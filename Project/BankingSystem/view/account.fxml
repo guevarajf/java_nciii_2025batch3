@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.AccountController"
+            prefWidth="400" prefHeight="300">
+  <children>
+    <Label text="Account Operations" layoutX="110" layoutY="20" style="-fx-font-size:18;"/>
+    <Label text="Owner:" layoutX="50" layoutY="70"/>
+    <TextField fx:id="ownerField" layoutX="130" layoutY="65" prefWidth="200"/>
+    <Label text="Amount:" layoutX="50" layoutY="110"/>
+    <TextField fx:id="amountField" layoutX="130" layoutY="105" prefWidth="200"/>
+    <Button text="Deposit" layoutX="80" layoutY="160" onAction="#deposit"/>
+    <Button text="Withdraw" layoutX="220" layoutY="160" onAction="#withdraw"/>
+    <Label fx:id="statusLabel" layoutX="100" layoutY="220" textFill="green"/>
+  </children>
+</AnchorPane>

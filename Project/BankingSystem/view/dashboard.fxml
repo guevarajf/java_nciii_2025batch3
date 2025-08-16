@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.DashboardController"
+            prefWidth="600" prefHeight="400">
+  <children>
+    <Label text="Dashboard" layoutX="260" layoutY="20" style="-fx-font-size:20;"/>
+    <Button text="Deposit" layoutX="100" layoutY="80" prefWidth="150" onAction="#openDeposit"/>
+    <Button text="Withdraw" layoutX="350" layoutY="80" prefWidth="150" onAction="#openWithdraw"/>
+    <Button text="Account Ops" layoutX="225" layoutY="140" prefWidth="150" onAction="#openAccountOps"/>
+    <Button text="Logout" layoutX="250" layoutY="300" prefWidth="100" onAction="#logout"/>
+  </children>
+</AnchorPane>
