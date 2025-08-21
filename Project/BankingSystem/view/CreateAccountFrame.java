@@ -49,7 +49,7 @@ public class CreateAccountFrame extends JFrame {
         JPanel titlePanel = new JPanel();
         titlePanel.setBackground(new Color(46, 125, 50));
         titlePanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        JLabel titleLabel = new JLabel("User Enrollment - Banking System");
+        JLabel titleLabel = new JLabel("Create New Account");
         titleLabel.setFont(new Font("Arial", Font.BOLD, 16));
         titleLabel.setForeground(Color.WHITE);
         titlePanel.add(titleLabel);

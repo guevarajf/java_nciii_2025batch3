@@ -50,7 +50,7 @@ java -cp ".;lib\sqlite-jdbc-3.50.3.0.jar" Main
 
 ## Other Login
 ## Login    Password	Role
-admin   	admin   	Admin
+admin   admin   	Admin
 qqqq	    1111	    Customer
 admin1	    Admin1@1	Admin
 zzzz	    Zzzz1111@	Manager

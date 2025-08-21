@@ -251,7 +251,7 @@ public class DashboardFrame extends JFrame {
                 cards.add(createActionCard(
                         "Change Password",
                         "Update user passwords",
-                        "🔐",
+                        "🔒",
                         INDIGO,
                         () -> openChangePasswordFrame()));
 
@@ -290,7 +290,7 @@ public class DashboardFrame extends JFrame {
                 cards.add(createActionCard(
                         "Change Password",
                         "Update user passwords",
-                        "🔐",
+                        "🔒",
                         INDIGO,
                         () -> openChangePasswordFrame()));
 
@@ -487,11 +487,7 @@ public class DashboardFrame extends JFrame {
     }
 
     private void openChangePasswordFrame() {
-        // Placeholder for change password functionality
-        JOptionPane.showMessageDialog(this,
-                "Change Password functionality - To be implemented",
-                "Change Password",
-                JOptionPane.INFORMATION_MESSAGE);
+        new ChangePasswordFrame().setVisible(true);
     }
 
     private void logout() {
