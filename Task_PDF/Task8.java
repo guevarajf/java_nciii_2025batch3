@@ -1,4 +1,5 @@
-package Chapter4;
+//package Chapter4;
+import java.io.IOException;
 public class Task8 {
     
     // Method  with variable arguments and computes the cumulative sums
@@ -31,6 +32,9 @@ public class Task8 {
     
     public static void main(String[] args) {
 
+        // Clear screen before starting
+        clearScreen.clearScreen();
+
         System.out.println("Example 1: Parameters (4, 5, 10)");
         computeCumulativeSum(4, 5, 10);
         
@@ -42,5 +46,6 @@ public class Task8 {
         
         System.out.println("Example 4: Single parameter (5)");
         computeCumulativeSum(5);
+
     }
 }
